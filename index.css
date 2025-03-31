@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#212121, #0c1a32);
+    margin: 0;
+}
+
+.background img {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.form-container {   
+    width: 100%;
+    max-width: 350px;
+    min-width: 250px;
+    height: auto;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.436);
+    backdrop-filter: blur(3px);
+    transition: all 0.5s ease;
+}
+
+.form-container:hover {
+    box-shadow: 0 0 30px 10px #000c02;
+}
+
+.form-container h2 {
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.input-container input {
+    width: 90%;
+    padding: 10px 10px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.remember-forgot {
+    flex-wrap: nowrap;
+    display: flex;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    gap: 2rem;
+}
+
+.forgot a{
+    color: white;
+    text-decoration: none;
+}
+
+.register p {
+    color: white;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.input-container i {
+    position: absolute;
+    right: 20px; /* Jarak ikon dari kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 23px;
+}
+
+#button-login {
+    width: 85%;
+    font-size: 20px;
+    border: 2px solid white;
+    background-color: #21212121;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#button-login:hover {
+    background-color: rgba(0, 255, 255, 0.242);
+}
+
+input[type="password"] {
+    -webkit-text-security: disc; /* Safari */
+}
+
+input[type="password"]::-ms-reveal, 
+input[type="password"]::-ms-clear {
+    display: none; /* Hilangkan ikon bawaan di Microsoft Edge */
+}
+
+
+
