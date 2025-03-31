@@ -12,45 +12,54 @@
         <img src="background.gif">
     </div>
     <div class="form-container">
-        <div class="overlay"></div>
-        <h2>Form Login</h2>
-        <div class="input-container">
-            <input type="text" id="username" placeholder="Username">
-            <i class="bi bi-person-circle"></i>
-        </div>
-        
-        <div class="input-container">
-            <input type="password" id="pass" placeholder="Password">
-            <i class="bi bi-eye" id="togglePassword"></i>
-        </div>
-        <div class="remember-forgot">
-            <div class="remember-me">
-                <input type="checkbox" id= "remember" name="remember">
-                <label for="remember">Remember me</label>
+        <!-- Form Login -->
+        <div class="form-login">
+            <h2>Form Login</h2>
+            <div class="input-container">
+                <input type="text" id="username" placeholder="Username" required>
+                <i class="bi bi-person-circle"></i>
             </div>
-           <div class="forgot">
-                <a href="index.html">Forgot Password?</a>
-           </div> 
+            <div class="input-container">
+                <input type="password" id="pass" placeholder="Password" required>
+                <i class="bi bi-eye" id="togglePassword"></i>
+            </div>
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <div class="forgot">
+                    <a href="index.html">Forgot Password?</a>
+                </div>
+            </div>
+            <button id="button-login">Login</button>      
+            <div class="register">
+                <p>Don't Have an Account? <a href="#" class="register-link">Register</a></p>
+            </div>
         </div>
-        <button id="button-login">Login</button>      
-        <div class="register">
-            <p>Don't Have an Account? <a href="index.html">Register</a></p>
+    
+        <!-- Form Register -->
+        <div class="form-regis">
+            <h2>Form Register</h2>
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Email" required>
+                <i class="bi bi-envelope-at-fill"></i>
+            </div>
+            <div class="input-container">
+                <input type="text" id="username-reg" placeholder="Username" required>
+                <i class="bi bi-person-circle"></i>
+            </div>
+            <div class="input-container">
+                <input type="password" id="pass-reg" placeholder="Password" required>
+                <i class="bi bi-eye" id="togglePasswordReg"></i>
+            </div>
+            <button id="button-regis">Register</button>  
+            <div class="login">
+                <p>Do you have an account? <a href="#" class="login-link">Login</a></p>
+            </div>
         </div>
-    </div>
+    </div>    
 </body>
-<script>
-    document.getElementById("togglePassword").addEventListener("click", function() {
-        let passInput = document.getElementById("pass");
-        if (passInput.type === "password") {
-            passInput.type = "text";
-            this.classList.remove("bi-eye");
-            this.classList.add("bi-eye-slash"); // Ganti ikon ke "mata tertutup"
-        } else {
-            passInput.type = "password";
-            this.classList.remove("bi-eye-slash");
-            this.classList.add("bi-eye"); // Ganti ikon ke "mata terbuka"
-        }
-    });
-</script>
+<script src="index.js"></script>
 
 </html>
